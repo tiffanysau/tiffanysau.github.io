@@ -1,34 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tiffany Au</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 60px auto;
-      line-height: 1.6;
-    }
-    h1 {
-      font-size: 2.2em;
-    }
-    a {
-      color: #0070f3;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiffany Au | Portfolio</title>
+  <meta name="description" content="Portfolio of Tiffany Au — Bioinformatics + IoT + Cloud." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>Tiffany Au</h1>
-  <h2>Projects</h2>
-  <ul>
-    <li>Tea Shop Classfication</li>
-  </ul>
+  <main class="about-section">
+    <section class="container">
+      <div class="row">
+        <div class="col-left">
+          <h1 class="section-title">
+            Know Who <span class="accent">I’M</span>
+          </h1>
 
-  <h2>Contact</h2>
-  <p>Email: tiffanyau2027@gmail.com</p>
+          <div class="card">
+            <p>
+              Hi! I’m <strong>Tiffany</strong>, a UCI student working at the intersection of
+              <strong> biological sciences</strong> and <strong>computer science</strong>.
+            </p>
+            <p>
+              I build end-to-end systems—from <strong>IoT sensing</strong> (ESP32, IMU) to
+              <strong> cloud pipelines</strong> (Azure IoT) to <strong>data analysis</strong>
+              (Python/R) for health and biology applications.
+            </p>
+            <p>
+              Right now I’m building a <strong>Fall Detection & Alert System</strong> and doing
+              <strong> RNA-seq/bioinformatics</strong> research.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-right">
+          <!-- Put your image in the repo as /assets/about.png -->
+          <img class="about-img" src="assets/about.png" alt="Laptop illustration" />
+        </div>
+      </div>
+
+      <h2 class="block-heading">
+        Professional <span class="accent">Skillset</span>
+      </h2>
+
+      <div class="grid">
+        <div class="pill">Python</div>
+        <div class="pill">R</div>
+        <div class="pill">Bash/Linux</div>
+        <div class="pill">C/C++</div>
+        <div class="pill">Bioinformatics</div>
+        <div class="pill">RNA-seq</div>
+        <div class="pill">ESP32</div>
+        <div class="pill">BLE</div>
+        <div class="pill">Azure IoT Hub</div>
+        <div class="pill">Git</div>
+      </div>
+
+      <h2 class="block-heading">
+        <span class="accent">Tools</span> I use
+      </h2>
+
+      <div class="grid">
+        <div class="pill">VS Code</div>
+        <div class="pill">PyCharm</div>
+        <div class="pill">Jupyter</div>
+        <div class="pill">GitHub</div>
+        <div class="pill">HPC / Slurm</div>
+        <div class="pill">Azure IoT Explorer</div>
+      </div>
+
+      <section class="github-block">
+        <h2 class="block-heading">GitHub</h2>
+        <p>
+          <a href="https://github.com/tiffanysau" target="_blank" rel="noreferrer">
+            github.com/tiffanysau
+          </a>
+        </p>
+      </section>
+
+    </section>
+  </main>
 
 </body>
 </html>
+
