@@ -1,93 +1,153 @@
+/* =========================
+   Color System (Dim Light)
+   ========================= */
 :root{
-  --bg: #0b0f19;
-  --text: #e6e8ee;
-  --muted: #b5b9c8;
-  --card: rgba(255,255,255,0.06);
-  --border: rgba(255,255,255,0.12);
-  --accent: #a855f7; /* “purple” vibe */
+  --bg: #f1f3f6;          /* light grey background */
+  --text: #1f2937;        /* dark grey text */
+  --muted: #4b5563;       /* secondary text */
+  --card: #ffffff;        /* white cards */
+  --border: rgba(0,0,0,0.08);
+  --accent: #7c3aed;      /* soft purple accent */
 }
 
-* { box-sizing: border-box; }
+/* =========================
+   Global Reset
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background: radial-gradient(1200px 700px at 20% 10%, rgba(168,85,247,0.18), transparent 60%),
-              radial-gradient(900px 600px at 80% 20%, rgba(59,130,246,0.12), transparent 60%),
-              var(--bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
+               Roboto, Helvetica, Arial, "Apple Color Emoji",
+               "Segoe UI Emoji";
+
+  background:
+    radial-gradient(900px 500px at 10% 0%, rgba(124,58,237,0.08), transparent 60%),
+    radial-gradient(800px 500px at 90% 10%, rgba(99,102,241,0.06), transparent 60%),
+    var(--bg);
+
   color: var(--text);
+  line-height: 1.6;
 }
 
-a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
-a:hover { border-bottom-color: var(--accent); }
+/* =========================
+   Links
+   ========================= */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
 
-.container{
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* =========================
+   Layout
+   ========================= */
+.container {
   width: min(1050px, 92vw);
   margin: 0 auto;
   padding: 56px 0;
 }
 
-.row{
+.row {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 28px;
   align-items: center;
 }
 
-.section-title{
+/* =========================
+   Typography
+   ========================= */
+.section-title {
   font-size: clamp(28px, 3.2vw, 40px);
   margin: 0 0 18px 0;
+  font-weight: 700;
 }
 
-.accent{ color: var(--accent); font-weight: 700; }
+.block-heading {
+  font-size: 22px;
+  margin: 42px 0 16px;
+  font-weight: 600;
+}
 
-.card{
+.accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* =========================
+   Cards
+   ========================= */
+.card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 18px;
-  padding: 18px 18px;
-  line-height: 1.65;
+  padding: 20px;
   color: var(--muted);
 }
 
-.card strong { color: var(--text); }
+.card strong {
+  color: var(--text);
+}
 
-.about-img{
+/* =========================
+   Image
+   ========================= */
+.about-img {
   width: 100%;
   max-width: 420px;
   display: block;
   margin-left: auto;
   border-radius: 18px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
+  background: #f8fafc;
 }
 
-.block-heading{
-  font-size: 22px;
-  margin: 42px 0 16px;
-}
-
-.grid{
+/* =========================
+   Grid (Skills / Tools)
+   ========================= */
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 12px;
 }
 
-.pill{
-  padding: 12px 12px;
+.pill {
+  padding: 12px;
   border-radius: 14px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: #f8fafc;
   text-align: center;
   color: var(--text);
+  font-size: 14px;
 }
 
-.github-block{
+/* =========================
+   GitHub Section
+   ========================= */
+.github-block {
   margin-top: 44px;
-  padding-top: 10px;
+  padding-top: 12px;
   border-top: 1px solid var(--border);
 }
 
-@media (max-width: 860px){
-  .row{ grid-template-columns: 1fr; }
-  .about-img{ margin: 12px 0 0 0; max-width: 520px; }
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 860px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    margin: 16px 0 0 0;
+    max-width: 520px;
+  }
 }
+
