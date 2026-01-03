@@ -2,7 +2,7 @@
    Color System (Dim Light)
    ========================= */
 :root{
-  --bg: #f1f3f6;          /* light grey background */
+  --bg: #D9CFC7;          /* light grey background */
   --text: #1f2937;        /* dark grey text */
   --muted: #4b5563;       /* secondary text */
   --card: #ffffff;        /* white cards */
