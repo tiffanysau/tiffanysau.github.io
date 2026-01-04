@@ -1,87 +1,170 @@
-/* =========================
-   Color System (Dim Light)
-   ========================= */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root{
-  --bg: #D9CFC7;         
-  --text: #1f2937;      
-  --muted: #4b5563;       
-  --card: #ffffff;       
-  --border: rgba(0,0,0,0.08);
-  --accent: #112A46;    
+  --bg: #D9CFC7;          /* warm light beige */
+  --text: #1f2937;        /* dark slate */
+  --muted: #4b5563;       /* secondary text */
+  --card: #ffffff;        /* white cards */
+  --border: rgba(0,0,0,0.10);
+  --accent: #112A46;      /* deep navy */
 }
 
-/* =========================
-   Global Reset
-   ========================= */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
 
-/* =========================
-   Links
-   ========================= */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-a:hover {
-  border-bottom-color: var(--accent);
-}
-
-/* =========================
-   Layout
-   ========================= */
-.container {
+/* layout helpers */
+.container{
   width: min(1050px, 92vw);
   margin: 0 auto;
-  padding: 56px 0;
 }
 
-.row {
+.section{
+  padding: 72px 0;
+}
+
+/* HERO */
+.hero{
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 28px;
-  align-items: center;
+  place-items: center;
+  padding: 28px 0 64px;
+  position: relative;
 }
 
-/* =========================
-   Typography
-   ========================= */
-.section-title {
-  font-size: clamp(28px, 3.2vw, 40px);
-  margin: 0 0 18px 0;
-  font-weight: 700;
+.hero-inner{
+  width: min(900px, 92vw);
+  text-align: center;
 }
 
-.block-heading {
-  font-size: 22px;
-  margin: 42px 0 16px;
+/* avatar with subtle ring */
+.avatar-wrap{
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  padding: 4px;
+  background: linear-gradient(135deg, rgba(17,42,70,0.25), rgba(255,255,255,0.6));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.avatar{
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid rgba(255,255,255,0.85);
+}
+
+.hero-title{
+  margin: 10px 0 8px;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.15;
   font-weight: 600;
 }
 
-.accent {
+.accent{
   color: var(--accent);
   font-weight: 700;
 }
 
-/* =========================
-   Cards
-   ========================= */
-.card {
+.hero-subtitle{
+  margin: 10px auto 0;
+  color: var(--muted);
+  max-width: 52rem;
+  font-size: clamp(14px, 1.6vw, 18px);
+}
+
+.hero-subtitle strong{
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* buttons */
+.hero-actions{
+  margin-top: 22px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.btn-primary{
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+}
+
+.btn-primary:hover{
+  background: #0d223a;
+}
+
+.btn-secondary{
+  background: rgba(255,255,255,0.55);
+  color: var(--accent);
+}
+
+.btn-secondary:hover{
+  background: rgba(255,255,255,0.75);
+}
+
+/* scroll cue */
+.scroll-cue{
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.chev{
+  display: inline-block;
+  font-size: 34px;
+  line-height: 1;
+  animation: bob 1.5s ease-in-out infinite;
+}
+
+@keyframes bob{
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(7px); }
+}
+
+/* headings + card for about */
+.block-heading{
+  font-size: 22px;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.card{
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -89,63 +172,7 @@ a:hover {
   color: var(--muted);
 }
 
-.card strong {
-  color: var(--text);
+/* mobile tweaks */
+@media (max-width: 520px){
+  .avatar-wrap{ width: 120px; height: 120px; }
 }
-
-/* =========================
-   Image
-   ========================= */
-.about-img {
-  width: 100%;
-  max-width: 420px;
-  display: block;
-  margin-left: auto;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  background: #f8fafc;
-}
-
-/* =========================
-   Grid (Skills / Tools)
-   ========================= */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-}
-
-.pill {
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: #f8fafc;
-  text-align: center;
-  color: var(--text);
-  font-size: 14px;
-}
-
-/* =========================
-   GitHub Section
-   ========================= */
-.github-block {
-  margin-top: 44px;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-}
-
-/* =========================
-   Responsive
-   ========================= */
-@media (max-width: 860px) {
-  .row {
-    grid-template-columns: 1fr;
-  }
-
-  .about-img {
-    margin: 16px 0 0 0;
-    max-width: 520px;
-  }
-}
-
-
