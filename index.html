@@ -4,29 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tiffany Au | Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=6">
-
+  <meta name="description" content="Tiffany Au — Bioinformatics + IoT + Cloud." />
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
+
 <body>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
 
-  <main class="about-section">
-    <section class="container">
-      <div class="row">
-        <div class="col-left">
-          <h1 class="section-title">
-            <span class="accent">Tiffany Au</span>
-          </h1>
+        <div class="avatar-wrap">
+          <!-- Put your photo at /assets/profile.jpg -->
+          <img class="avatar" src="assets/profile.jpg" alt="Tiffany Au" />
+        </div>
 
-          <div class="card">
-            <p>
-              <strong>Thanks for stopping by. Check out a snapshot of my work.</strong>
-            </p>
+        <h1 class="hero-title">
+          Hi, I’m <span class="accent">Tiffany</span>.
+        </h1>
 
+        <p class="hero-subtitle">
+          Thanks for stopping by. Here’s a snapshot of my work.
+          I build at the intersection of <strong>bioinformatics</strong>,
+          <strong>IoT</strong>, and <strong>cloud systems</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <!-- Put your resume PDF at /assets/Tiffany_Au_Resume.pdf -->
+          <a class="btn btn-primary" href="assets/Tiffany_Au_Resume.pdf" target="_blank" rel="noopener">
+            View Resume
+          </a>
+
+          <!-- Change the email -->
+          <a class="btn btn-secondary" href="mailto:tiffany@email.com">
+            Contact
+          </a>
+        </div>
       </div>
 
+      <!-- scroll cue -->
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
+        <span class="chev">⌄</span>
+      </a>
+    </section>
+
+    <!-- ABOUT (anchor target for scroll cue) -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="block-heading">About</h2>
+        <div class="card">
+          <p>
+            I’m a UCI student studying Biological Sciences and Computer Science (bioinformatics focus).
+            I like building end-to-end pipelines—from sensors to cloud to analysis.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
-
 </body>
 </html>
-
