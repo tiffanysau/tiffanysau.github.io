@@ -169,6 +169,7 @@ body {
   border-radius: 18px;
   padding: 20px;
   color: var(--muted);
+  margin-bottom: 20px;
 }
 
 /* mobile tweaks */
