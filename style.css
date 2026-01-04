@@ -146,14 +146,9 @@ body {
 
 .chev{
   display: inline-block;
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1;
-  animation: bob 1.5s ease-in-out infinite;
-}
-
-@keyframes bob{
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(7px); }
+  color: var(--accent);
 }
 
 /* headings + card for about */
