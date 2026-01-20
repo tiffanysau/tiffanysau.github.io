@@ -144,7 +144,7 @@ body {
   border-radius: 999px;
   background: rgba(255,255,255,0.92);  /* white circle */
   border: 1px solid var(--border);
-  display: grid;
+  display: block;
   place-items: center;
   text-decoration: none;
   box-shadow: 0 10px 22px rgba(0,0,0,0.10);
