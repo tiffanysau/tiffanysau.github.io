@@ -158,30 +158,42 @@ body{
 }
 
 /* =====================
-   SCROLL CUE (FIXED)
+   SCROLL CUE
 ===================== */
 .scroll-cue{
   position: absolute;
   bottom: 18px;
   left: 50%;
-  transform: translateX(-50%);
+
   width: 46px;
   height: 46px;
-  border-radius: 999px;
+  border-radius: 50%;
+
   background: rgba(255,255,255,0.92);
   border: 1px solid var(--border);
-
-  display: grid;          /* REQUIRED */
-  place-items: center;    /* PERFECT CENTER */
-
-  text-decoration: none;
   box-shadow: 0 10px 22px rgba(0,0,0,0.10);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+
+  display: flex;                 /* 🔑 */
+  align-items: center;           /* 🔑 */
+  justify-content: center;       /* 🔑 */
+
+  transform: translateX(-50%);
+  text-decoration: none;
 }
 
 .scroll-cue:hover{
   transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 14px 26px rgba(0,0,0,0.14);
+}
+
+.chev{
+  display: block;
+  font-size: 24px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: var(--accent);
+  pointer-events: none;
 }
 
 /* arrow */
@@ -213,7 +225,7 @@ body{
   margin-bottom: 20px;
 }
 
-/* clickable wrapper — NO UNDERLINES EVER */
+/* clickable wrapper */
 .card-link,
 .card-link:visited,
 .card-link:hover,
@@ -223,18 +235,23 @@ body{
   color: inherit;
 }
 
+.card-link,
 .card-link *{
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
-.card-link .card{
-  transition: transform 180ms ease, box-shadow 180ms ease;
+.card-link:hover,
+.card-link:hover *{
+  text-decoration: none !important;
 }
 
-.card-link:hover .card{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 26px rgba(0,0,0,0.12);
+a.card-link,
+a.card-link:visited,
+a.card-link:hover,
+a.card-link:active,
+a.card-link *{
+  text-decoration: none !important;
 }
 
 /* =====================
