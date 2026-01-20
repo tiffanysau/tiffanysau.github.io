@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/* =====================
+   VARIABLES
+===================== */
 :root{
   --bg: #D9CFC7;
   --text: #1f2937;
@@ -9,11 +12,18 @@
   --border: rgba(0,0,0,0.08);
 }
 
-* { box-sizing: border-box; }
+/* =====================
+   RESET / BASE
+===================== */
+*{
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html{
+  scroll-behavior: smooth;
+}
 
-body {
+body{
   margin: 0;
   font-family: "Poppins", ui-sans-serif, system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial;
@@ -22,7 +32,9 @@ body {
   line-height: 1.6;
 }
 
-/* layout helpers */
+/* =====================
+   LAYOUT HELPERS
+===================== */
 .container{
   width: min(1050px, 92vw);
   margin: 0 auto;
@@ -32,7 +44,9 @@ body {
   padding: 72px 0;
 }
 
-/* HERO */
+/* =====================
+   HERO
+===================== */
 .hero{
   min-height: 100vh;
   display: grid;
@@ -94,7 +108,9 @@ body {
   font-weight: 600;
 }
 
-/* buttons */
+/* =====================
+   BUTTONS
+===================== */
 .hero-actions{
   margin-top: 22px;
   display: flex;
@@ -124,7 +140,7 @@ body {
 
 .btn-primary{
   background: var(--accent);
-  color: white;
+  color: #fff;
   border-color: transparent;
 }
 
@@ -141,7 +157,9 @@ body {
   background: rgba(255,255,255,0.75);
 }
 
-/* scroll cue */
+/* =====================
+   SCROLL CUE (FIXED)
+===================== */
 .scroll-cue{
   position: absolute;
   bottom: 18px;
@@ -152,12 +170,13 @@ body {
   border-radius: 999px;
   background: rgba(255,255,255,0.92);
   border: 1px solid var(--border);
-  display: grid;
-  place-items: center;
+
+  display: grid;          /* REQUIRED */
+  place-items: center;    /* PERFECT CENTER */
+
   text-decoration: none;
   box-shadow: 0 10px 22px rgba(0,0,0,0.10);
-  transition: transform 180ms ease,
-              box-shadow 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .scroll-cue:hover{
@@ -165,6 +184,7 @@ body {
   box-shadow: 0 14px 26px rgba(0,0,0,0.14);
 }
 
+/* arrow */
 .chev{
   display: block;
   font-size: 26px;
@@ -172,14 +192,18 @@ body {
   color: var(--accent);
 }
 
-/* headings */
+/* =====================
+   HEADINGS
+===================== */
 .block-heading{
   font-size: 22px;
   margin: 0 0 16px;
   font-weight: 600;
 }
 
-/* cards */
+/* =====================
+   CARDS
+===================== */
 .card{
   background: var(--card);
   border: 1px solid var(--border);
@@ -189,9 +213,17 @@ body {
   margin-bottom: 20px;
 }
 
-/* clickable card wrapper */
-.card-link{
+/* clickable wrapper — NO UNDERLINES EVER */
+.card-link,
+.card-link:visited,
+.card-link:hover,
+.card-link:active{
   display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link *{
   text-decoration: none;
   color: inherit;
 }
@@ -205,7 +237,9 @@ body {
   box-shadow: 0 14px 26px rgba(0,0,0,0.12);
 }
 
-/* mobile tweaks */
+/* =====================
+   MOBILE
+===================== */
 @media (max-width: 520px){
   .avatar-wrap{
     width: 120px;
