@@ -44,8 +44,8 @@
              Although readings from the F1-F8 spectral channels, which span approximately 415-680nm, were sample-specific and valuable, they were excluded due to the risk of overfitting the kNN model. 
              Temperature readings were also excluded due to low variability between samples and treated as a noise factor. 
 
-             A kNN classifier was selected because it does not require explicit model training and performs well with small datasets. 
-             All remaining features were normalized to ensure equal weighting during kNN classification.             
+             A kNN classifier (k=3) was selected for its compatability with small datasets and its ability to model disjoin decision regions, with performance evaluated using a 70:30 train:test split.
+             All remaining features were normalized to ensure equal weighting during kNN classification. 
           </p>
 
           <h2 class="project-section">Results</h2>
