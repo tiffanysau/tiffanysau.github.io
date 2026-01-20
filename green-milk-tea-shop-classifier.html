@@ -37,7 +37,16 @@
 
           <h2 class="project-section">Methods</h2>
           <p class="muted">
-           
+             To minimize variability, all green milk tea samples were ordered with zero sugar and no ice. 
+             For each sample, sensor measurements were recorded using the same apparatus and conditions. 
+             With the exception of total dissolved solids (TDS) and temperature, all sensor readings were taken as raw values. 
+             Although readings from the F1-F8 spectral channels, which span approximately 415-680nm, were sample-specific and valuable, they were excluded due to the risk of overfitting the kNN model. 
+             Temperature readings were also excluded due to low variability between samples and treated as a noise factor. 
+
+             A kNN classifier is advantageous when working with small datasets and does not require explicit model training. 
+             All remaining features were normalized to ensure equal weighting during kNN classification. 
+            
+             Model performance was evaluated using a classification report.
           </p>
           
         </div>
