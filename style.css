@@ -263,6 +263,29 @@ a.card-link *{
   box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
+/* ===== PROJECT PAGE LAYOUT ===== */
+
+.project-row{
+  display: flex;          /* side-by-side */
+  align-items: center;    /* vertically center text to image */
+  gap: 32px;
+}
+
+.project-row .project-img{
+  flex: 0 0 360px;        /* fixed image column */
+  max-width: 360px;
+  margin: 0;              /* remove auto-centering */
+}
+
+.project-text{
+  flex: 1;
+}
+
+.project-title{
+  margin-top: 0;
+}
+
+
 /* =====================
    MOBILE
 ===================== */
