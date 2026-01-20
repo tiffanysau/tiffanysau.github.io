@@ -265,26 +265,22 @@ a.card-link *{
 
 /* ===== PROJECT PAGE LAYOUT ===== */
 
-.project-row{
-  display: flex;          /* side-by-side */
-  align-items: flex-start;
-  gap: 32px;
-}
-
-.project-row .project-img{
-  flex: 0 0 360px;        /* fixed image column */
-  max-width: 360px;
-  margin: 0;              /* remove auto-centering */
+.project-figure{
+  margin: 0;
 }
 
 .project-text{
-  flex: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .project-title{
-  margin-top: 0;
+  margin: 0 0 10px;
 }
 
+.project-text p{
+  margin-top: 0;
+}
 
 /* =====================
    MOBILE
