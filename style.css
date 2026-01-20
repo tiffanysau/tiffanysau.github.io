@@ -267,7 +267,7 @@ a.card-link *{
 
 .project-row{
   display: flex;          /* side-by-side */
-  align-items: center;    /* vertically center text to image */
+  align-items: flex-start;
   gap: 32px;
 }
 
