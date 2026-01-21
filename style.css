@@ -247,7 +247,7 @@ a.card-link *{
 }
 
 /* =====================
-   PROJECT IMAGES (default centered)
+   PROJECT IMAGES
 ===================== */
 .project-img{
   width: 100%;
@@ -264,7 +264,7 @@ a.card-link *{
   max-width: 360px;
 }
 
-/* ===== PROJECT PAGE LAYOUT (THIS WAS MISSING) ===== */
+/* top header row (image left, text right) */
 .project-row{
   display: flex;
   align-items: flex-start;
@@ -274,11 +274,14 @@ a.card-link *{
 
 .project-figure{
   margin: 0;
+  flex: 0 0 360px;
 }
 
 .project-text{
   margin: 0;
   padding: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .project-title{
@@ -289,21 +292,12 @@ a.card-link *{
   margin-top: 0;
 }
 
-/* =====================
-   MOBILE
-===================== */
-@media (max-width: 820px){
+/* MOBILE */
+@media (max-width: 520px){
   .project-row{
     flex-direction: column;
   }
   .project-img--side{
     max-width: 100%;
-  }
-}
-
-@media (max-width: 520px){
-  .avatar-wrap{
-    width: 120px;
-    height: 120px;
   }
 }
