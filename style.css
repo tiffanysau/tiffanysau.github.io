@@ -263,6 +263,12 @@ a.card-link *{
   box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
+.project-img--side{
+  margin: 0;
+  max-width: 360px;
+}
+
+
 /* ===== PROJECT PAGE LAYOUT ===== */
 
 .project-figure{
