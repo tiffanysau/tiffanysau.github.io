@@ -264,6 +264,10 @@ a.card-link *{
   max-width: 360px;
 }
 
+.project-img--large{
+  max-width: 720px;   /* try 720–900 if needed */
+}
+
 /* top header row (image left, text right) */
 .project-row{
   display: flex;
