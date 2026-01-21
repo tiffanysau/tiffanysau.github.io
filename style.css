@@ -268,6 +268,20 @@ a.card-link *{
   max-width: 720px;   /* try 720–900 if needed */
 }
 
+
+/* Violin plot layout */
+.violin-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.violin-grid .project-img{
+  max-width: 100%;
+  margin: 0;
+}
+
 /* top header row (image left, text right) */
 .project-row{
   display: flex;
@@ -294,19 +308,6 @@ a.card-link *{
 
 .project-text p{
   margin-top: 0;
-}
-
-/* Violin plot layout */
-.violin-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 16px;
-}
-
-.violin-grid .project-img{
-  max-width: 100%;
-  margin: 0;
 }
 
 @media (max-width: 900px){
