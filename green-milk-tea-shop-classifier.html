@@ -21,116 +21,106 @@
         </figure>
 
         <div class="project-text">
-          
           <h1 class="project-title">Green Milk Tea Shop Classifier</h1>
           <p class="muted">
             ESP32-based system integrating five sensors: color, total dissolved solids (TDS),
             turbidity, temperature, and pH. The apparatus was used to collect sensor data from
             green milk tea samples across five different retail stores.
           </p>
-
-          <h2 class="project-section">Objective</h2>
-          <p class="muted">
-            The objective of this project was to use a sensor data–driven machine learning
-            approach to distinguish between green milk tea samples using the k-nearest neighbors (kNN) algorithm.
-          </p>
-
-          <h2 class="project-section">Methods</h2>
-          <p class="muted">
-             To minimize variability, all green milk tea samples were ordered with zero sugar and no ice. 
-             Sensors were not formally calibrated. However, all sensor measurements were recorded using the same apparatus and consistent conditions. 
-          </p>
-
-           <p class="muted">
-              With the exception of total dissolved solids (TDS) and temperature, all sensor readings were taken as raw values. 
-              Measurements were recorded every 10 seconds over a 500-second period, with the first 200 seconds excluded from the analysis to maintain stabilized readings.
-              Although the data from the F1-F8 spectral channels, which span approximately 415-680nm, were sample-specific and valuable, they were excluded due to risk of overfitting the kNN model. 
-              Temperature readings were also excluded due to low variability between samples and treated as a noise factor. 
-           </p>
-          
-          <p class="muted">
-              A kNN classifier (k=3) was selected for its compatability with small datasets and its ability to model disjoint decision regions, with performance evaluated using a 70:30 train:test split.
-              All remaining features were normalized to ensure equal weighting during kNN classification. 
-          </p>
-             
-
-          <h2 class="project-section">Results</h2>
-          <p class="muted">
-             Model performance was evaluated using a classification report summarizing precision, recall, and F1-score across the five locations.
-          </p>
-
-          <figure class="project-figure">
-          <img
-            src="./images/classification-report.png"
-            class="project-img"
-          >
-          </figure>
-
-          <p class="muted">
-             Confusion Matrix
-          </p>
-          
-          <figure class="project-figure">
-          <img
-            src="./images/confusion-matrix-v2.svg"
-            class="project-img"
-          >
-          </figure>
-
-           <p class="muted">
-             Correlation Heatmap
-           </p>
-          
-          <figure class="project-figure">
-          <img
-            src="./images/correlation-heatmap-v2.svg"
-            class="project-img"
-          >
-          </figure>
-
-          <p class="muted">
-             Violin Plots
-           </p>
-          
-          <figure class="project-figure">
-          <img
-            src="./images/clear-raw.svg"
-            class="project-img"
-          >
-          </figure>
-
-          <figure class="project-figure">
-          <img
-            src="./images/nir-raw.svg"
-            class="project-img"
-          >
-          </figure>
-
-          <figure class="project-figure">
-          <img
-            src="./images/pH_raw.svg"
-            class="project-img"
-          >
-          </figure>
-
-          <figure class="project-figure">
-          <img
-            src="./images/TDS_ppm.svg"
-            class="project-img"
-          >
-          </figure>
-
-          <figure class="project-figure">
-          <img
-            src="./images/turb_raw.svg"
-            class="project-img"
-          >
-          </figure>
-
-          
         </div>
 
       </div>
+
+      <h2 class="project-section">Objective</h2>
+      <p class="muted">
+        The objective of this project was to use a sensor data–driven machine learning
+        approach to distinguish between green milk tea samples using the k-nearest neighbors (kNN) algorithm.
+      </p>
+
+      <h2 class="project-section">Methods</h2>
+      <p class="muted">
+        To minimize variability, all green milk tea samples were ordered with zero sugar and no ice.
+        Sensors were not formally calibrated. However, all sensor measurements were recorded using the same apparatus and consistent conditions.
+      </p>
+
+      <p class="muted">
+        With the exception of total dissolved solids (TDS) and temperature, all sensor readings were taken as raw values.
+        Measurements were recorded every 10 seconds over a 500-second period, with the first 200 seconds excluded from the analysis to maintain stabilized readings.
+        Although the data from the F1-F8 spectral channels, which span approximately 415-680nm, were sample-specific and valuable, they were excluded due to risk of overfitting the kNN model.
+        Temperature readings were also excluded due to low variability between samples and treated as a noise factor.
+      </p>
+
+      <p class="muted">
+        A kNN classifier (k=3) was selected for its compatability with small datasets and its ability to model disjoint decision regions, with performance evaluated using a 70:30 train:test split.
+        All remaining features were normalized to ensure equal weighting during kNN classification.
+      </p>
+
+      <h2 class="project-section">Results</h2>
+      <p class="muted">
+        Model performance was evaluated using a classification report summarizing precision, recall, and F1-score across the five locations.
+      </p>
+
+      <figure class="project-figure">
+        <img
+          src="./images/classification-report.png"
+          class="project-img"
+        >
+      </figure>
+
+      <p class="muted">Confusion Matrix</p>
+
+      <figure class="project-figure">
+        <img
+          src="./images/confusion-matrix-v2.svg"
+          class="project-img"
+        >
+      </figure>
+
+      <p class="muted">Correlation Heatmap</p>
+
+      <figure class="project-figure">
+        <img
+          src="./images/correlation-heatmap-v2.svg"
+          class="project-img"
+        >
+      </figure>
+
+      <p class="muted">Violin Plots</p>
+
+      <figure class="project-figure">
+        <img
+          src="./images/clear-raw.svg"
+          class="project-img"
+        >
+      </figure>
+
+      <figure class="project-figure">
+        <img
+          src="./images/nir-raw.svg"
+          class="project-img"
+        >
+      </figure>
+
+      <figure class="project-figure">
+        <img
+          src="./images/pH_raw.svg"
+          class="project-img"
+        >
+      </figure>
+
+      <figure class="project-figure">
+        <img
+          src="./images/TDS_ppm.svg"
+          class="project-img"
+        >
+      </figure>
+
+      <figure class="project-figure">
+        <img
+          src="./images/turb_raw.svg"
+          class="project-img"
+        >
+      </figure>
 
     </div>
   </main>
