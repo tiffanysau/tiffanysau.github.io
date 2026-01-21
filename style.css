@@ -290,6 +290,15 @@ a.card-link *{
   margin-bottom: 24px;
 }
 
+.project-section{
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+
+.project-text p{
+  margin-bottom: 18px;
+}
+
 .project-figure{
   margin: 0;
   flex: 0 0 360px;
@@ -309,6 +318,7 @@ a.card-link *{
 .project-text p{
   margin-top: 0;
 }
+
 
 @media (max-width: 900px){
   .violin-grid{
